@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "operation": "move",
+      "source": {
+        "inventory": {
+          "labels": [
+            "tag1",
+            "tag2",
+            "tag3"
+          ],
+          "storageSet": [
+            {"s3Location": "<path1>"},
+            {"gcsLocation": "<path2>"},
+            {"azLocation": "<path3>"}
+          ],
+          "expandCollections": true
+        }
+      },
+      "destination": {
+        "inventory": {
+          "storage": "<sourceStorage>"
+        },
+        "name": "<taskName>",
+        "overwrite": "always"
+      }
+    }
+  ]
+}
