@@ -5,3 +5,10 @@ def foo():
         yield i
         print("after yield", i)
     print("end")
+
+
+# 	>> f = foo()
+# 	>> next(f)
+# 	>> next(f)
+# 	>> next(f)
+#   >> next(f)
