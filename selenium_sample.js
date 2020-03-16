@@ -1,12 +1,14 @@
 test.describe( 'Test Suite' , function(){
+    WebDriver driver = new ChromeDriver();
 
     test.it( 'Test Case' , function(){
-        driver.findElement(webdriver.By.id(tab1Id)).click();
-        var descriptionElement = driver.findElement(webdriver.By.id(resourceDescription));
+        driver.get("https://dev.sdvi.com");
+        driver.findElement(webdriver.By.id("resource1TabId")).click();
+        var descriptionElement = driver.findElement(By.id("resourceDescription"));
         var text = descriptionElement.getText();
         expect(text).equals("This is the description of item 1");
 
-        driver.findElement(webdriver.By.id(tab2Id)).click();
+        driver.findElement(By.id("resource2TabId")).click();
         text = descriptionElement.getText();
         expect(text).equals("This is the description of item 2");
 
